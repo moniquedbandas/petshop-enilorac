@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* cor dos conteudos */
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
+  --content-tertiary: #666666;
+  --content-brand: #9282fa;
+
+  /* cor de background */
+  --background-primary: #151515;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #23242c;
+  --background-brand: #9282fa;
+  --background-highlights: #bdb4fa;
+
+  /* cor das bordas */
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
+  --border-divisor: #353339;
+
+  --accent-blue: #027df0;
+  --accent-blue-light: #16487a;
+  --accent-yellow: #f0dc02;
+  --accent-yellow-light: #756e1b;
+  --accent-orange: #f09102;
+  --accent-orange-light: #75501b;
+
+  --font-title: "Inter tight", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --title: bold 24px/133% var(--font-title);
+  --paragraph-medium: 500 14px/171% var(--font-body);
+  --paragraph-small: 500 12px/133% var(--font-body);
+  --label-large: bold 1rem/150% var(--font-body);
+  --label-medium: bold 14px/171% var(--font-body);
+  --label-small: bold 12px/133% var(--font-body);
+  --link: 500 12px/133% var(--font-body);
+}
+
+body {
+  background-color: var(--background-primary);
+}
+.flex {
+  display: flex;
+}

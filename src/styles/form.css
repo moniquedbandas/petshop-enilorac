@@ -1,0 +1,198 @@
+:modal {
+  background-color: var(--background-tertiary);
+  border: 2px solid var(--border-divisor);
+  border-radius: 12px;
+  width: 500px;
+  height: 70vh;
+  cursor: pointer;
+  margin: auto;
+  &::backdrop {
+    background: rgba(71, 70, 70, 0.473);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+  }
+}
+
+.formulario {
+  padding: 50px;
+  flex-direction: column;
+  & header {
+    & h1 {
+      font: var(--title);
+      color: var(--content-primary);
+    }
+    & p {
+      font: var(--paragraph-medium);
+      color: var(--content-secondary);
+    }
+  }
+  & label {
+    font: var(--label-medium);
+    color: var(--content-primary);
+  }
+  & input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    border: 1px solid var(--border-secondary);
+    outline: none;
+    border-radius: 5px;
+
+    &#telefone {
+      background-image: url(../assets/telefone.png);
+    }
+    &#client {
+      background-image: url(../assets/usuario.png);
+    }
+    &#pet {
+      background-image: url(../assets/patinhaForm.png);
+    }
+    &#date {
+      background-image: url(../assets/calendario.png);
+    }
+    &#time {
+      background-image: url(../assets/relogio.png);
+    }
+  }
+  & .datinha {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 4px;
+  }
+  & .btnAgendar {
+    width: 123px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: var(--content-brand);
+    font: var(--label-large);
+    color: #050505;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-top: 28px;
+  }
+}
+
+.teste {
+  max-width: 870px;
+  margin: auto;
+  padding: 20px;
+  height: calc(100vh - 100px);
+  background-color: var(--background-tertiary);
+  border-radius: 12px;
+
+  & header {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    & h1 {
+      font: var(--title);
+      color: var(--content-primary);
+    }
+    & p {
+      font: var(--paragraph-medium);
+      color: var(--content-secondary);
+    }
+    & .titulo-princ {
+      flex: 1;
+    }
+    & .input-calendario {
+      padding: 12px 12px 12px 40px;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: 10px center;
+      border: 1px solid var(--border-secondary);
+      outline: none;
+      border-radius: 5px;
+      background-image: url(../assets/calendario.png);
+    }
+  }
+}
+
+.agendamentos {
+  flex-direction: column;
+  & .periodo-agendamentos {
+    border: 1px solid var(--border-primary);
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 12px;
+
+    & header {
+      align-items: center;
+      border-bottom: 1px solid var(--border-primary);
+      & img {
+        margin: 14px 12px 14px 20px;
+        width: 20px;
+      }
+      & strong {
+        flex: 1;
+        font: var(--label-large);
+        color: var(--content-primary);
+      }
+      & span {
+        margin-right: 20px;
+        font: var(--label-large);
+        color: var(--content-secondary);
+      }
+    }
+
+    & ul {
+      list-style: none;
+      margin: 2rem;
+      padding-bottom: 12px;
+      & li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 25px;
+        border-bottom: 1px solid var(--border-primary);
+        & strong:nth-child(1) {
+          flex: 0 0 3rem;
+          /* margin-right: 1rem; */
+          font: var(--label-medium);
+          color: var(--content-primary);
+        }
+        & strong:nth-child(2) {
+          flex: 0 0 3rem;
+          margin-right: 1rem;
+          font: var(--label-small);
+          color: var(--content-primary);
+        }
+        & span:nth-child(3) {
+          flex: 0 0 8rem;
+          font: var(--paragraph-small);
+          color: var(--content-secondary);
+        }
+        & span:nth-child(4) {
+          flex: 1;
+          font: var(--paragraph-small);
+          color: var(--content-secondary);
+        }
+        & button:nth-child(5) {
+          flex: 0 0 12rem;
+          font: var(--paragraph-small);
+          color: var(--content-tertiary);
+          border: none;
+          cursor: pointer;
+          background-color: var(--background-tertiary);
+        }
+      }
+    }
+  }
+}
+#novoAgendamento {
+  display: block;
+  background-color: var(--content-brand);
+  font: var(--label-large);
+  color: #050505;
+  margin: auto;
+  align-self: flex-end;
+  margin-right: 30px;
+  width: 218px;
+  height: 48px;
+  border-radius: 12px;
+}
