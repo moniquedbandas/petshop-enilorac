@@ -10,7 +10,6 @@
         href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="icon" href="./src/assets/patinha.png">
-    <!-- <link rel="stylesheet" href="./src/styles/index.css"> -->
     <title>PetShop Enilorac</title>
 
 <link rel="icon" href="patinha.png"><script defer src="main.js"></script></head>
@@ -20,11 +19,12 @@
         <img src="./src/assets/logo.png" alt="logo" class="logo">
         <div class="teste">
             <header>
-                <h1>Sua agenda</h1>
-                <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
-                <div class="input-calendario">
-                    <img src="./src/assets/calendario.png" alt="calendario">
-                    <input type="date" name="date" id="date">
+                <div class="titulo-princ">
+                    <h1>Sua agenda</h1>
+                    <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+                </div>
+                <div class="input-calendario flex">
+                    <input type="date" name="date" id="date2">
                 </div>
             </header>
 
@@ -104,8 +104,8 @@
             </div>
         </div>
         <button id="novoAgendamento">NOVO AGENDAMENTO</button>
-        <dialog id="dialogAgendamento" class="flex">
-            <form method="dialog">
+        <dialog id="dialogAgendamento">
+            <form method="dialog" class="formulario flex">
                 <header>
                     <h1>Agende um atendimento</h1>
                     <p>
@@ -118,31 +118,42 @@
 
                 <label for="client" class="label">Nome do tutor</label>
                 <div class="input">
-                    <i><img src="./src/assets/usuario.png" alt="cliente" /></i>
+                    <!-- <i><img src="./src/assets/usuario.png" alt="cliente" /></i> -->
                     <input type="text" id="client" name="client" placeholder="Nome do tutor" required />
                 </div>
                 <label for="pet" class="label">Nome do pet</label>
                 <div class="input">
-                    <i><img src="./src/assets/Pet-Paw--Streamline-Core.png" alt="pet" /></i>
+                    <!-- <i><img src="./src/assets/Pet-Paw--Streamline-Core.png" alt="pet" /></i> -->
                     <input type="text" id="pet" name="pet" placeholder="Nome do pet" required />
                 </div>
-
-                <label for="date" class="label">Data</label>
+                <label for="telefone">Telefone</label>
                 <div class="input">
-                    <i><img src="./src/assets/calendario.png" alt="Calendário" /></i>
-                    <input type="date" id="date" name="date" required />
+                    <input type="tel" name="telefone" id="telefone">
                 </div>
-                <label for="date" class="label">Hora</label>
+                <label for="descricao">Descrição do serviço</label>
                 <div class="input">
-                    <i><img src="./src/assets/calendario.png" alt="Calendário" /></i>
-                    <input type="date" id="date" name="date" required />
+                    <textarea name="descricao" id="descricao" rows="3" cols="50">
+                    </textarea>
+                </div>
+                <div class="datinha ">
+                    <div class="calendarioData">
+                        <label for="date" class="label">Data</label>
+                        <div class="input">
+                            <input type="date" id="date" name="date" required />
+                        </div>
+                    </div>
+                    <div class="horaData">
+                        <label for="time" class="label hora">Hora</label>
+                        <div class="input ">
+                            <input type="time" id="time" name="time" required />
+                        </div>
+                    </div>
                 </div>
 
-                <button type="submit" class="button" id="agendado">Agendar</button>
+                <button type="submit" class="btnAgendar" id="agendado">AGENDAR</button>
             </form>
         </dialog>
     </div>
-    <!-- <script src="./src/form/janelaAgendamento.js"></script> -->
 </body>
 
 </html>

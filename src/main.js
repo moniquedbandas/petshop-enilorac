@@ -6,4 +6,4 @@ import "./libs/dayjs.js";
 import "./styles/global.css";
 import "./styles/form.css";
 
-import "./form/janelaAgendamento.js";
+import "../src/modules/form/janelaAgendamento.js";

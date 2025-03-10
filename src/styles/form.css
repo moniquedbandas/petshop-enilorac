@@ -3,7 +3,7 @@
   border: 2px solid var(--border-divisor);
   border-radius: 12px;
   width: 500px;
-  height: 70vh;
+  height: auto;
   cursor: pointer;
   margin: auto;
   &::backdrop {
@@ -14,9 +14,10 @@
 }
 
 .formulario {
-  padding: 50px;
+  padding: 20px;
   flex-direction: column;
   & header {
+    margin-bottom: 28px;
     & h1 {
       font: var(--title);
       color: var(--content-primary);
@@ -38,6 +39,7 @@
     background-position: 10px center;
     border: 1px solid var(--border-secondary);
     outline: none;
+    margin-bottom: 1rem;
     border-radius: 5px;
 
     &#telefone {
@@ -56,13 +58,7 @@
       background-image: url(../assets/relogio.png);
     }
   }
-  & .datinha {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 16px;
-    grid-row-gap: 4px;
-  }
+
   & .btnAgendar {
     width: 123px;
     height: 48px;
@@ -76,18 +72,15 @@
   }
 }
 
-.teste {
+.agendamentos {
   max-width: 870px;
-  margin: auto;
   padding: 20px;
-  height: calc(100vh - 100px);
-  background-color: var(--background-tertiary);
   border-radius: 12px;
 
   & header {
     margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     gap: 12px;
     & h1 {
       font: var(--title);
@@ -105,22 +98,15 @@
       background-repeat: no-repeat;
       background-size: 20px;
       background-position: 10px center;
-      border: 1px solid var(--border-secondary);
-      outline: none;
       border-radius: 5px;
       background-image: url(../assets/calendario.png);
     }
   }
-}
-
-.agendamentos {
-  flex-direction: column;
   & .periodo-agendamentos {
     border: 1px solid var(--border-primary);
     border-radius: 5px;
-    width: 100%;
     margin-bottom: 12px;
-
+    background-color: var(--background-tertiary);
     & header {
       align-items: center;
       border-bottom: 1px solid var(--border-primary);
@@ -146,34 +132,32 @@
       padding-bottom: 12px;
       & li {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 1rem;
-        padding: 25px;
+        flex-wrap: wrap;
+        padding: 20px;
         border-bottom: 1px solid var(--border-primary);
         & strong:nth-child(1) {
-          flex: 0 0 3rem;
-          /* margin-right: 1rem; */
+          margin-right: 1rem;
           font: var(--label-medium);
           color: var(--content-primary);
         }
         & strong:nth-child(2) {
-          flex: 0 0 3rem;
-          margin-right: 1rem;
           font: var(--label-small);
           color: var(--content-primary);
         }
         & span:nth-child(3) {
-          flex: 0 0 8rem;
           font: var(--paragraph-small);
           color: var(--content-secondary);
         }
         & span:nth-child(4) {
-          flex: 1;
+          flex-basis: 100%;
+          margin-bottom: 8px;
           font: var(--paragraph-small);
           color: var(--content-secondary);
         }
         & button:nth-child(5) {
-          flex: 0 0 12rem;
+          margin-left: auto;
           font: var(--paragraph-small);
           color: var(--content-tertiary);
           border: none;
@@ -184,6 +168,7 @@
     }
   }
 }
+
 #novoAgendamento {
   display: block;
   background-color: var(--content-brand);
@@ -195,4 +180,50 @@
   width: 218px;
   height: 48px;
   border-radius: 12px;
+}
+
+@media (min-width: 80rem) {
+  .agendamentos {
+    & header {
+      display: flex;
+      align-items: center;
+    }
+    margin: auto;
+    & ul {
+      & li {
+        display: flex;
+        flex-wrap: nowrap !important;
+        /* utilizando o !important para sobrescrever o flex-wrap do mobile */
+        align-items: center;
+        padding: 25px !important;
+        gap: 1rem;
+
+        & strong:nth-child(1) {
+          flex: 0 0 3rem;
+        }
+        & strong:nth-child(2) {
+          flex: 0 0 3rem;
+        }
+        & span:nth-child(3) {
+          flex: 0 0 8rem;
+        }
+        & span:nth-child(4) {
+          flex: 1;
+        }
+        & button:nth-child(5) {
+          flex: 0 0 12rem;
+        }
+      }
+    }
+  }
+
+  .formulario {
+    & .datinha {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 16px;
+      grid-row-gap: 4px;
+    }
+  }
 }
