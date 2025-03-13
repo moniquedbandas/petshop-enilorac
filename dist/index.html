@@ -17,93 +17,72 @@
 <body>
     <div class="container">
         <img src="./src/assets/logo.png" alt="logo" class="logo">
-        <div class="teste">
+        <div class="agendamentos ">
             <header>
                 <div class="titulo-princ">
                     <h1>Sua agenda</h1>
                     <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
                 </div>
-                <div class="input-calendario flex">
-                    <input type="date" name="date" id="date2">
+                <div class="input-calendario">
+                    <input type="date" name="date" id="date">
                 </div>
             </header>
 
-            <div class="agendamentos flex">
-                <section class="periodo-agendamentos">
-                    <header class="flex">
-                        <img src="./src/assets/periodoManha.png" alt="manha">
-                        <strong>Manhã</strong>
-                        <span>09h-12h</span>
-                    </header>
-                    <ul id="periodo-manha" class="periodo ">
-                        <li>
-                            <strong>9:00</strong>
-                            <strong>Bombom</strong>
-                            <span>Alan</span>
-                            <span>Banho</span>
-                            <button>Remover agendamento</button>
-                        </li>
-                        <li>
-                            <strong>10:00</strong>
-                            <strong>Carol</strong>
-                            <span>Monique</span>
-                            <span>Banho</span>
-                            <button>Remover agendamento</button>
-                        </li>
-                        <li>
-                            <strong>11:00</strong>
-                            <strong>Flip</strong>
-                            <span>Monique</span>
-                            <span>Vacinação e tosa</span>
-                            <button>Remover agendamento</button>
-                        </li>
-                        <li>
-                            <strong>12:00</strong>
-                            <strong>Lolo</strong>
-                            <span>Ana</span>
-                            <span>Consulta veterinária</span>
-                            <button>Remover agendamento</button>
-                        </li>
+            <section class="periodo-agendamentos">
+                <header class="flex">
+                    <img src="./src/assets/periodoManha.png" alt="manha">
+                    <strong>Manhã</strong>
+                    <span>09h-12h</span>
+                </header>
+                <ul id="periodo-manha" class="periodo ">
+                    <li>
+                        <strong>9:00</strong>
+                        <strong>Bombom</strong>
+                        <span>Alan</span>
+                        <span>Banho</span>
+                        <button>Remover agendamento</button>
+                    </li>
+                </ul>
+            </section>
 
-                    </ul>
-                </section>
-
-                <section class="periodo-agendamentos">
-                    <header class="flex">
-                        <img src="./src/assets/periodoTarde.png" alt="tarde">
-                        <strong>Tarde</strong>
-                        <span>13h-18h</span>
-                    </header>
-                    <ul id="periodo-tarde" class="periodo">
-                        <!--<li>
+            <section class="periodo-agendamentos">
+                <header class="flex">
+                    <img src="./src/assets/periodoTarde.png" alt="tarde">
+                    <strong>Tarde</strong>
+                    <span>13h-18h</span>
+                </header>
+                <ul id="periodo-tarde" class="periodo">
+                    <!--<li>
                     <strong>13:00</strong>
                     <strong>Carol</strong>
                     <span>Monique</span>
                     <span>Tosa</span>
                     <button>Cancelar</button>
                 </li> -->
-                    </ul>
-                </section>
+                </ul>
+            </section>
 
-                <section class="periodo-agendamentos">
-                    <header class="flex">
-                        <img src="./src/assets/periodoNoite.png" alt="noite">
-                        <strong>Noite</strong>
-                        <span>19h-21h</span>
-                    </header>
-                    <ul id="periodo-noite" class="periodo">
-                        <!--<li>
+            <section class="periodo-agendamentos">
+                <header class="flex">
+                    <img src="./src/assets/periodoNoite.png" alt="noite">
+                    <strong>Noite</strong>
+                    <span>19h-21h</span>
+                </header>
+                <ul id="periodo-noite" class="periodo">
+                    <!--<li>
                     <strong>19:00</strong>
                     <strong>Carol</strong>
                     <span>Monique</span>
                     <span>Tosa</span>
                     <button>Cancelar</button>
                 </li> -->
-                    </ul>
-                </section>
-            </div>
+                </ul>
+            </section>
+
         </div>
+
         <button id="novoAgendamento">NOVO AGENDAMENTO</button>
+
         <dialog id="dialogAgendamento">
             <form method="dialog" class="formulario flex">
                 <header>
@@ -112,18 +91,13 @@
                         Preencha os dados do cliente para realizar o agendamento:
                     </p>
                 </header>
-                <!-- <span class="label">Hora</span>
-                <ul id="hours" class="hours" aria-label="Horários disponíveis de manhã">
-                </ul> -->
 
                 <label for="client" class="label">Nome do tutor</label>
                 <div class="input">
-                    <!-- <i><img src="./src/assets/usuario.png" alt="cliente" /></i> -->
                     <input type="text" id="client" name="client" placeholder="Nome do tutor" required />
                 </div>
                 <label for="pet" class="label">Nome do pet</label>
                 <div class="input">
-                    <!-- <i><img src="./src/assets/Pet-Paw--Streamline-Core.png" alt="pet" /></i> -->
                     <input type="text" id="pet" name="pet" placeholder="Nome do pet" required />
                 </div>
                 <label for="telefone">Telefone</label>
@@ -132,20 +106,22 @@
                 </div>
                 <label for="descricao">Descrição do serviço</label>
                 <div class="input">
-                    <textarea name="descricao" id="descricao" rows="3" cols="50">
+                    <textarea name="descricao" id="descricao" rows="4" cols="30">
                     </textarea>
                 </div>
                 <div class="datinha ">
                     <div class="calendarioData">
                         <label for="date" class="label">Data</label>
                         <div class="input">
-                            <input type="date" id="date" name="date" required />
+                            <input type="date" id="dateM" name="date" required />
                         </div>
                     </div>
                     <div class="horaData">
                         <label for="time" class="label hora">Hora</label>
                         <div class="input ">
-                            <input type="time" id="time" name="time" required />
+                            <select name="time" id="time" required>
+                                <!-- <option value="9">9:00</option>
+                                <option value="10">10:00</option> -->
                         </div>
                     </div>
                 </div>
