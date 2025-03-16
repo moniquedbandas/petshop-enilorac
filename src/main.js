@@ -10,5 +10,7 @@ import "./styles/form.css";
 import "../src/modules/form/janelaAgendamento.js";
 
 import "../src/modules/page-load.js";
+
 import "../src/modules/form/submit.js";
 import "../src/modules/form/date-change.js";
+import "../src/modules/agendamentos/cancel.js";
